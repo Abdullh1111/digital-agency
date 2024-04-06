@@ -11,6 +11,7 @@ const Main = () => {
     return (
         <div className={theme ? 'dark' : 'light'}>
             <Nav data={data}></Nav>
+            
             hel
         </div>
     );

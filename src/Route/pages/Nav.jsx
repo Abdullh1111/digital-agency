@@ -1,6 +1,7 @@
 import  { useState } from 'react';
 import './Nav.css';
 import Theme from './Theme';
+import Head from './Header/Head';
 const Nav = ({data}) => {
     const [theme, setTheme] = useState(true);
     const handletheme=() =>{
@@ -8,9 +9,10 @@ const Nav = ({data}) => {
     }
     data(theme)
     return (
-        <div className={theme ? 'bg-gradient-to-r from-[#7b3eff50] via-[#0A142F] to-[#be229c36]' : ''}>
+       <div>
+         <div className={theme ? 'bg-gradient-to-r from-[#7b3eff50] via-[#0A142F] to-[#be229c36]' : ''}>
             
-            <img className={`absolute ${theme ? 'opacity-50' : 'opacity-0'}`} src="../../../public/430076393_836341161866186_8150816279921766384_n.png" alt="" />
+            <img className={`absolute bg-transparent ${theme ? 'opacity-50' : 'opacity-0'}`} src="../../../public/430076393_836341161866186_8150816279921766384_n.png" alt="" />
         <div className='flex justify-around items-center pt-3'>
             <h1 className='text-4xl font-bold'>Shera <span className='bg-gradient-to-t from-[#63b5c6] to-[#F8B549] text-transparent bg-clip-text'>Web</span></h1>
             <p className='text-lg font-medium'>About us</p>
@@ -23,7 +25,9 @@ const Nav = ({data}) => {
             <Theme handletheme={handletheme} theme={theme}></Theme>
             </div>
         </div>
+        <Head></Head>
         </div>
+       </div>
     );
 };
 
